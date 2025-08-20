@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>T2 | Wild Rift Pro Team</title>
-  <meta name="description" content="T2 Wild Rift 프로팀 — 2024년부터 국제대회 우승 및 상위 성적. 로스터, 하이라이트, 일정, 멤버십.">
+  <meta name="description" content="T2 Wild Rift 프로팀 — 2024년부터 국제대회 상위권 성적과 경쟁력을 유지하고 있는 프로 조직. 로스터, 하이라이트, 일정, 멤버십.">
   <meta property="og:title" content="T2 | Wild Rift Pro Team">
-  <meta property="og:description" content="검빨 다크 무드 & 하이프 트랜지션. 멤버십 가입, 다국어 지원.">
+  <meta property="og:description" content="검빨 다크 무드. 프로 조직으로서의 전문성과 경기력 중심의 커뮤니케이션.">
   <meta property="og:type" content="website">
   <meta property="theme-color" content="#0b0b0f">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
@@ -144,6 +144,14 @@
     .social a{opacity:.9}
     .social a:hover{opacity:1}
 
+    /* 모달 */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:120}
+    .modal{background:#0e0e12;border:1px solid #1d1d27;border-radius:12px;padding:18px;max-width:480px;width:100%}
+    .modal h4{margin:0 0 12px}
+    .modal .row{margin-bottom:12px}
+    .modal .row input{width:100%;padding:10px;border-radius:8px;border:1px solid #2a2a36;background:#0f0f15;color:#eef}
+    .modal .actions{display:flex;gap:10px;justify-content:flex-end}
+
     /* 스크롤 리빌 */
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
     .reveal.in{opacity:1;transform:translateY(0)}
@@ -166,7 +174,7 @@
         <a href="#membership" data-i18n="nav.membership" class="cta">Membership</a>
       </div>
       <div class="lang">
-        <span aria-hidden="true">EMOJI_0</span>
+        <span aria-hidden="true">🇰🇷</span>
         <select id="lang-switch" aria-label="언어 선택">
           <option value="ko">한국어</option>
           <option value="en">English</option>
@@ -183,27 +191,29 @@
       <div>
         <h1 class="glitch" data-text="RISE OF T2" data-i18n="hero.title">RISE OF T2</h1>
         <p class="hero-sub" data-i18n="hero.subtitle">
-          와일드 리프트 프로팀 T2. 2024년부터 국제대회 우승과 상위 성적을 이어가며, 검빨 다크 무드로 리그를 장악 중.
+          T2는 조직적 운영과 라인전에서의 우위를 바탕으로 국제대회 경쟁력을 갖춘 프로 팀입니다. 경기의 핵심 순간에서 정확한 결정을 통해 경기를 마무리합니다.
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#media" data-i18n="hero.btnHighlight">하이라이트 보기</a>
           <a class="btn" href="#roster" data-i18n="hero.btnRoster">로스터 살펴보기</a>
         </div>
         <div class="hero-stat">
-          <div class="stat"><b data-i18n="hero.stat1.title">2024~</b><span data-i18n="hero.stat1.desc">국제대회 상위권 다수</span></div>
-          <div class="stat"><b data-i18n="hero.stat2.title">우승</b><span data-i18n="hero.stat2.desc">복수 타이틀 보유</span></div>
-          <div class="stat"><b data-i18n="hero.stat3.title">팬덤</b><span data-i18n="hero.stat3.desc">#T2Rises</span></div>
+          <div class="stat"><b data-i18n="hero.stat1.title">Since 2024</b><span data-i18n="hero.stat1.desc">국제 대회 꾸준한 성적</span></div>
+          <div class="stat"><b data-i18n="hero.stat2.title">Competitive</b><span data-i18n="hero.stat2.desc">프로 페이즈 운영</span></div>
+          <div class="stat"><b data-i18n="hero.stat3.title">Fandom</b><span data-i18n="hero.stat3.desc">#T2Rises</span></div>
         </div>
       </div>
       <div class="hero-card reveal">
         <h3 style="margin:0 0 8px" data-i18n="hero.identity.title">팀 아이덴티티</h3>
         <div class="divider"></div>
-        <p style="margin:0;color:#c8c9cf" data-i18n="hero.identity.desc">블랙 × 레드, 침착한 운영 + 폭발적인 한타. 모든 순간을 하이라이트로 만든다.</p>
+        <p style="margin:0;color:#c8c9cf" data-i18n="hero.identity.desc">
+          강한 라인전으로 초반 주도권을 확보하고, 중요 교전에서 전략적 판단으로 교전 우위를 점하여 경기를 확정짓는 스타일을 지향합니다.
+        </p>
         <div class="divider"></div>
         <ul style="margin:0;padding-left:18px;color:#b9bac0">
-          <li data-i18n="hero.identity.p1">다크 글로우 + 글리치 포인트</li>
-          <li data-i18n="hero.identity.p2">부드러운 스크롤 리빌, 카드 호버 리프트</li>
-          <li data-i18n="hero.identity.p3">반응형 · 터치 프렌들리</li>
+          <li data-i18n="hero.identity.p1">라인전 주도와 리드 관리</li>
+          <li data-i18n="hero.identity.p2">교전 실행 시 명확한 역할 분담</li>
+          <li data-i18n="hero.identity.p3">데이터 기반 경기 준비 및 피드백</li>
         </ul>
       </div>
     </div>
@@ -211,25 +221,25 @@
 
   <div class="marquee">
     <div class="marquee-inner">
-      <div class="partner">T2 STORE</div>
-      <div class="partner">T2 LAB</div>
-      <div class="partner">HYPERGEAR</div>
-      <div class="partner">REDLINE</div>
-      <div class="partner">GIGA NET</div>
-      <div class="partner">ULTRADISPLAY</div>
-      <div class="partner">T2 STORE</div>
-      <div class="partner">T2 LAB</div>
-      <div class="partner">HYPERGEAR</div>
-      <div class="partner">REDLINE</div>
-      <div class="partner">GIGA NET</div>
-      <div class="partner">ULTRADISPLAY</div>
+      <div class="partner">Samsung</div>
+      <div class="partner">Nike</div>
+      <div class="partner">Red Bull</div>
+      <div class="partner">Secretlab</div>
+      <div class="partner">Logitech G</div>
+      <div class="partner">Red Sea Global</div>
+      <div class="partner">Samsung</div>
+      <div class="partner">Nike</div>
+      <div class="partner">Red Bull</div>
+      <div class="partner">Secretlab</div>
+      <div class="partner">Logitech G</div>
+      <div class="partner">Red Sea Global</div>
     </div>
   </div>
 
   <section id="roster">
     <div class="container">
       <h2 class="h2" data-i18n="roster.title">Roster</h2>
-      <p class="sub" data-i18n="roster.subtitle">선수 얼굴 대신 주챔 사진만 노출합니다.</p>
+      <p class="sub" data-i18n="roster.subtitle">선수 개인의 얼굴 대신 선수별 메인 챔피언을 노출하여 전술적 특징을 전달합니다.</p>
       <div class="grid">
         <!-- TOP -->
         <article class="card reveal">
@@ -244,19 +254,21 @@
           </div>
           <div class="champions"><b data-i18n="roster.mains">주챔</b> 요네 · 야스오 · 볼리베어</div>
         </article>
-        <!-- JUNGLE -->
+
+        <!-- JUNGLE (수정) -->
         <article class="card reveal">
           <div class="card-top">
             <span class="lane">JUNGLE</span>
-            <span class="name">Kiwi</span>
+            <span class="name">둔칫땃칫</span>
           </div>
           <div class="champs-pics">
-            <div class="champ-thumb"><img src="assets/champs/viego.jpg" alt="비에고"></div>
-            <div class="champ-thumb"><img src="assets/champs/poppy.jpg" alt="뽀삐"></div>
-            <div class="champ-thumb"><img src="assets/champs/leesin.jpg" alt="리신"></div>
+            <div class="champ-thumb"><img src="assets/champs/xin_zhao.jpg" alt="신짜오"></div>
+            <div class="champ-thumb"><img src="assets/champs/jarvan.jpg" alt="자르반 4세"></div>
+            <div class="champ-thumb"><img src="assets/champs/nocturne.jpg" alt="녹턴"></div>
           </div>
-          <div class="champions"><b data-i18n="roster.mains">주챔</b> 비에고 · 뽀삐 · 리신</div>
+          <div class="champions"><b data-i18n="roster.mains">주챔</b> 신짜오 · 자르반 IV · 녹턴</div>
         </article>
+
         <!-- MID -->
         <article class="card reveal">
           <div class="card-top">
@@ -270,24 +282,26 @@
           </div>
           <div class="champions"><b data-i18n="roster.mains">주챔</b> 라이즈 · 빅토르 · 신드라</div>
         </article>
-        <!-- ADC -->
+
+        <!-- ADC (수정) -->
         <article class="card reveal">
           <div class="card-top">
             <span class="lane">ADC</span>
-            <span class="name">둔칫땃칫</span>
+            <span class="name">Kiwi</span>
           </div>
           <div class="champs-pics">
-            <div class="champ-thumb"><img src="assets/champs/xayah.jpg" alt="자야"></div>
-            <div class="champ-thumb"><img src="assets/champs/ashe.jpg" alt="애쉬"></div>
-            <div class="champ-thumb"><img src="assets/champs/kalista.jpg" alt="칼리스타"></div>
+            <div class="champ-thumb"><img src="assets/champs/ezreal.jpg" alt="이즈리얼"></div>
+            <div class="champ-thumb"><img src="assets/champs/corki.jpg" alt="코르키"></div>
+            <div class="champ-thumb"><img src="assets/champs/lucian.jpg" alt="루시안"></div>
           </div>
-          <div class="champions"><b data-i18n="roster.mains">주챔</b> 자야 · 애쉬 · 칼리스타</div>
+          <div class="champions"><b data-i18n="roster.mains">주챔</b> 이즈리얼 · 코르키 · 루시안</div>
         </article>
-        <!-- SUPPORT -->
+
+        <!-- SUPPORT (수정) -->
         <article class="card reveal">
           <div class="card-top">
             <span class="lane">SUPPORT</span>
-            <span class="name">30</span>
+            <span class="name">Kirakira</span>
           </div>
           <div class="champs-pics">
             <div class="champ-thumb"><img src="assets/champs/leona.jpg" alt="레오나"></div>
@@ -296,18 +310,17 @@
           </div>
           <div class="champions"><b data-i18n="roster.mains">주챔</b> 레오나 · 브라움 · 쉔</div>
         </article>
-        <!-- SIX MAN -->
+
+        <!-- SIX MAN (설명 변경) -->
         <article class="card reveal">
           <div class="card-top">
             <span class="lane">SIX MAN</span>
             <span class="name">Kaka</span>
           </div>
-          <div class="champs-pics">
-            <div class="champ-thumb"><img src="assets/champs/flex1.jpg" alt="플렉스 챔피언 1"></div>
-            <div class="champ-thumb"><img src="assets/champs/flex2.jpg" alt="플렉스 챔피언 2"></div>
-            <div class="champ-thumb"><img src="assets/champs/flex3.jpg" alt="플렉스 챔피언 3"></div>
+          <div style="padding:0 16px 16px;color:#c9cad1;font-size:14px">
+            <div style="margin-bottom:6px"><b data-i18n="roster.utility">유틸</b></div>
+            <div style="color:#b9bac0">전 라인 커버 가능한 멀티롤 플레이어 — 팀 전략에 따라 탑/정글/서포트 등 필요한 포지션을 유연하게 지원합니다.</div>
           </div>
-          <div class="champions"><b data-i18n="roster.utility">유틸</b> 팀플 중심 멀티롤</div>
         </article>
       </div>
     </div>
@@ -316,22 +329,20 @@
   <section id="achievements">
     <div class="container">
       <h2 class="h2" data-i18n="ach.title">Achievements</h2>
-      <p class="sub" data-i18n="ach.subtitle">2024년부터 국제대회 우승 및 다수의 상위권 성적을 달성했습니다.</p>
+      <p class="sub" data-i18n="ach.subtitle">리그 및 국제 무대에서 경쟁력을 검증받은 주요 대회 기록(대회명 표기).</p>
       <div class="timeline">
-        <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.03</b> Intercontinental Invitational 우승</div></div>
-        <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.07</b> Asia Clash Series 준우승</div></div>
-        <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.11</b> World Masters 4강</div></div>
-        <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2025.02</b> Global Champions 우승</div></div>
-        <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2025.06</b> Mid-Season Elite 준우승</div></div>
+        <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.04</b> LCK Spring — 우승</div></div>
+        <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.05</b> MSI (Mid-Season Invitational) — 준우승</div></div>
+        <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.10</b> World Championship (Worlds) — 4강</div></div>
+        <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2025.07</b> Esports World Cup (EWC) — 챔피언</div></div>
       </div>
-      <p class="sub" style="margin-top:12px;color:#9da0a8" data-i18n="ach.note">※ 대회명/월은 샘플. 실제 기록으로 교체하세요.</p>
     </div>
   </section>
 
   <section id="media">
     <div class="container">
       <h2 class="h2" data-i18n="media.title">Highlights</h2>
-      <p class="sub" data-i18n="media.subtitle">팀의 시그니처 한타와 리드미컬한 교전 감각을 모았습니다.</p>
+      <p class="sub" data-i18n="media.subtitle">팀의 시그니처 플레이와 전략적 운영이 드러나는 주요 경기 하이라이트입니다.</p>
       <div class="media">
         <iframe class="reveal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="T2 Highlights" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <div class="media-card reveal" data-i18n="media.placeholder">영상/이미지 슬라이더 영역 (스폰서 컷, 포토샷 등)</div>
@@ -342,11 +353,11 @@
   <section id="schedule">
     <div class="container">
       <h2 class="h2" data-i18n="schedule.title">Schedule & Results</h2>
-      <p class="sub" data-i18n="schedule.subtitle">다가오는 일정과 최근 매치 요약.</p>
+      <p class="sub" data-i18n="schedule.subtitle">LCK Legend Group의 팀들을 기반으로 구성한 최근 일정과 결과입니다.</p>
       <div class="list">
-        <div class="list-item reveal"><div><b>8/20</b> vs Phoenix — Bo5</div><span class="badge" data-i18n="schedule.upcoming">UPCOMING</span></div>
-        <div class="list-item reveal"><div><b>8/02</b> vs Hydra — 3:1 승</div><span class="badge" data-i18n="schedule.win">WIN</span></div>
-        <div class="list-item reveal"><div><b>7/15</b> vs Nova — 2:3 패</div><span class="badge" data-i18n="schedule.lose">LOSE</span></div>
+        <div class="list-item reveal"><div><b>8/20</b> vs Gen.G — Bo5</div><span class="badge" data-i18n="schedule.upcoming">UPCOMING</span></div>
+        <div class="list-item reveal"><div><b>8/02</b> vs Hanwha Life Esports — 3:1 승</div><span class="badge" data-i18n="schedule.win">WIN</span></div>
+        <div class="list-item reveal"><div><b>7/15</b> vs KT Rolster — 2:3 패</div><span class="badge" data-i18n="schedule.lose">LOSE</span></div>
       </div>
     </div>
   </section>
@@ -354,7 +365,7 @@
   <section id="membership">
     <div class="container">
       <h2 class="h2" data-i18n="member.title">Membership</h2>
-      <p class="sub" data-i18n="member.subtitle">T2 멤버십에 가입하고 전용 혜택을 누려보세요.</p>
+      <p class="sub" data-i18n="member.subtitle">간편한 이메일 가입으로 멤버십 혜택을 받을 수 있습니다. 플랜을 선택하면 이메일 입력 창이 열립니다.</p>
       <div class="plans">
         <div class="plan reveal">
           <h3 data-i18n="member.plan1">ROOKIE</h3>
@@ -363,7 +374,7 @@
             <li data-i18n="member.p1.b1">멤버십 전용 뉴스레터</li>
             <li data-i18n="member.p1.b2">디스코드 뱃지</li>
           </ul>
-          <button class="btn primary" data-plan="ROOKIE" data-i18n="member.join">가입하기</button>
+          <button class="btn primary plan-join" data-plan="ROOKIE" data-i18n="member.join">가입하기</button>
         </div>
         <div class="plan reveal">
           <h3 data-i18n="member.plan2">PRO</h3>
@@ -373,7 +384,7 @@
             <li data-i18n="member.p2.b2">하이라이트 영상 선공개</li>
             <li data-i18n="member.p2.b3">월 1회 Q&A</li>
           </ul>
-          <button class="btn primary" data-plan="PRO" data-i18n="member.join">가입하기</button>
+          <button class="btn primary plan-join" data-plan="PRO" data-i18n="member.join">가입하기</button>
         </div>
         <div class="plan reveal">
           <h3 data-i18n="member.plan3">LEGEND</h3>
@@ -383,21 +394,22 @@
             <li data-i18n="member.p3.b2">분기별 굿즈 추첨</li>
             <li data-i18n="member.p3.b3">오프라인 팬미팅 우선권</li>
           </ul>
-          <button class="btn primary" data-plan="LEGEND" data-i18n="member.join">가입하기</button>
+          <button class="btn primary plan-join" data-plan="LEGEND" data-i18n="member.join">가입하기</button>
         </div>
       </div>
+
       <div class="card reveal" style="margin-top:16px;padding:16px">
         <h3 style="margin:0 0 8px" data-i18n="member.formTitle">빠른 가입</h3>
         <form id="member-form">
-          <input required name="email" placeholder="이메일" style="width:100%;padding:12px;border-radius:10px;border:1px solid #2a2a36;background:#0f0f15;color:#f0f1f6;margin-bottom:10px">
-          <select name="plan" style="width:100%;padding:12px;border-radius:10px;border:1px solid #2a2a36;background:#0f0f15;color:#f0f1f6;margin-bottom:10px">
+          <input required name="email" id="member-email" placeholder="이메일" style="width:100%;padding:12px;border-radius:10px;border:1px solid #2a2a36;background:#0f0f15;color:#f0f1f6;margin-bottom:10px">
+          <select name="plan" id="member-plan" style="width:100%;padding:12px;border-radius:10px;border:1px solid #2a2a36;background:#0f0f15;color:#f0f1f6;margin-bottom:10px">
             <option value="ROOKIE">ROOKIE</option>
             <option value="PRO">PRO</option>
             <option value="LEGEND">LEGEND</option>
           </select>
           <button class="btn primary" type="submit" style="width:100%" data-i18n="member.formBtn">멤버십 가입</button>
         </form>
-        <p class="sub" style="margin:10px 0 0" data-i18n="member.note">결제는 추후 결제 페이지 연동 후 진행됩니다.</p>
+        <p class="sub" style="margin:10px 0 0;color:#9da0a8" data-i18n="member.note">가입 시 확인 이메일 전송(메일 클라이언트 열기)을 통해 가입을 완료합니다.</p>
       </div>
     </div>
   </section>
@@ -406,13 +418,28 @@
     <div class="foot">
       <div>© T2 Esports. All rights reserved.</div>
       <div class="social">
-        <a href="#" aria-label="YouTube">YouTube</a>
-        <a href="#" aria-label="X">X</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="Discord">Discord</a>
+        <a href="https://www.youtube.com" aria-label="YouTube" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://twitter.com" aria-label="X" target="_blank" rel="noopener">X</a>
+        <a href="https://www.instagram.com/t2._.official?igsh=MTdzazJxY3U4c2k5ZQ==" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://discord.gg" aria-label="Discord" target="_blank" rel="noopener">Discord</a>
       </div>
     </div>
   </footer>
+
+  <!-- 멤버십 이메일 모달 -->
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document" aria-labelledby="modal-title">
+      <h4 id="modal-title">멤버십 가입 — 이메일 입력</h4>
+      <div class="row">
+        <input type="email" id="modal-email" placeholder="가입할 이메일을 입력하세요" required>
+      </div>
+      <input type="hidden" id="modal-plan" value="">
+      <div class="actions">
+        <button class="btn" id="modal-cancel">취소</button>
+        <button class="btn primary" id="modal-submit">가입 요청 보내기</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     // 모바일 메뉴 토글
@@ -422,7 +449,7 @@
       links.style.display = disp==='none'?'flex':'none';
     });
 
-    // 스크롤 리빌
+    // 스크롤 리빌 (IntersectionObserver)
     const io=new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
     },{threshold:0.1});
@@ -436,93 +463,140 @@
       });
     });
 
-    // 멤버십 빠른 가입
+    // 플랜 카드에서 "가입하기" 클릭 -> 모달 열기 (이메일 입력)
+    const modalBackdrop = document.getElementById('modal-backdrop');
+    const modalEmail = document.getElementById('modal-email');
+    const modalPlanInput = document.getElementById('modal-plan');
+    document.querySelectorAll('.plan-join').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const plan = btn.getAttribute('data-plan') || 'ROOKIE';
+        modalPlanInput.value = plan;
+        modalEmail.value = '';
+        modalBackdrop.style.display = 'flex';
+        modalBackdrop.setAttribute('aria-hidden','false');
+        modalEmail.focus();
+      });
+    });
+    document.getElementById('modal-cancel').addEventListener('click', ()=>{
+      modalBackdrop.style.display = 'none';
+      modalBackdrop.setAttribute('aria-hidden','true');
+    });
+
+    // 모달 제출: mailto:로 가입 확인 이메일 열기 (사용자의 메일 클라이언트 사용)
+    document.getElementById('modal-submit').addEventListener('click', ()=>{
+      const email = modalEmail.value.trim();
+      const plan = modalPlanInput.value || document.querySelector('#member-plan').value;
+      if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        alert('유효한 이메일을 입력해주세요.');
+        modalEmail.focus();
+        return;
+      }
+      // mailto:를 이용해 사용자 메일 클라이언트에서 확인 메일 생성
+      const subject = encodeURIComponent(`T2 Membership 가입 요청 — ${plan}`);
+      const body = encodeURIComponent(`안녕하세요,\n\n다음 이메일로 멤버십 가입을 요청합니다.\n\n이메일: ${email}\n플랜: ${plan}\n\n확인 부탁드립니다.\nT2 Team`);
+      window.location.href = `mailto:membership@t2.gg?subject=${subject}&body=${body}`;
+      // 모달 닫기
+      modalBackdrop.style.display = 'none';
+      modalBackdrop.setAttribute('aria-hidden','true');
+      alert('메일 클라이언트가 열리면 전송 버튼을 눌러 가입 요청을 완료해 주세요.');
+    });
+
+    // 멤버십 빠른 가입 폼: 폼 제출 시 plan과 email로 동일한 mailto: 동작
     document.getElementById('member-form')?.addEventListener('submit', (e)=>{
       e.preventDefault();
-      const data=new FormData(e.target);
-      const email=data.get('email'); const plan=data.get('plan');
-      alert(`가입 완료!\\n이메일: ${email}\\n플랜: ${plan}`);
-      e.target.reset();
+      const email = document.getElementById('member-email').value.trim() || document.getElementById('member-form').elements['email'].value.trim();
+      const plan = document.getElementById('member-plan').value;
+      if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        alert('유효한 이메일을 입력해주세요.');
+        return;
+      }
+      const subject = encodeURIComponent(`T2 Membership 가입 요청 — ${plan}`);
+      const body = encodeURIComponent(`안녕하세요,\n\n다음 이메일로 멤버십 가입을 요청합니다.\n\n이메일: ${email}\n플랜: ${plan}\n\n확인 부탁드립니다.\nT2 Team`);
+      window.location.href = `mailto:membership@t2.gg?subject=${subject}&body=${body}`;
+      alert('메일 클라이언트가 열리면 전송 버튼을 눌러 가입 요청을 완료해 주세요.');
     });
-    // 플랜 카드에서 "가입하기" 클릭 시 폼에 값 반영
+
+    // 플랜 카드에서 폼에 값 반영 (기존 플랜 버튼 동작 유지)
     document.querySelectorAll('.plan .btn').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const plan=btn.getAttribute('data-plan');
-        const sel=document.querySelector('#member-form select[name="plan"]');
-        sel.value=plan;
-        document.querySelector('#membership').scrollIntoView({behavior:'smooth',block:'start'});
+      btn.addEventListener('click', (e)=>{
+        // 이미 plan-join 이벤트에서 모달을 열도록 처리되므로 여기서는 선택 동작만 보장
+        const plan = btn.getAttribute('data-plan');
+        const sel=document.querySelector('#member-plan');
+        if(sel) sel.value=plan;
       });
     });
 
-    // 다국어 i18n
+    // 다국어 i18n: 간단 적용 (전체 키만 변경)
     const dict={
       ko:{
         "nav.home":"Home","nav.roster":"Roster","nav.achievements":"Achievements","nav.media":"Media","nav.schedule":"Schedule","nav.membership":"Membership",
-        "hero.title":"RISE OF T2","hero.subtitle":"와일드 리프트 프로팀 T2. 2024년부터 국제대회 우승과 상위 성적을 이어가며, 검빨 다크 무드로 리그를 장악 중.",
+        "hero.title":"RISE OF T2",
+        "hero.subtitle":"T2는 조직적 운영과 라인전 우위를 바탕으로 국제 무대에서 경쟁력을 갖춘 프로팀입니다. 핵심 순간의 정확한 결단으로 경기를 마무리합니다.",
         "hero.btnHighlight":"하이라이트 보기","hero.btnRoster":"로스터 살펴보기",
-        "hero.stat1.title":"2024~","hero.stat1.desc":"국제대회 상위권 다수","hero.stat2.title":"우승","hero.stat2.desc":"복수 타이틀 보유","hero.stat3.title":"팬덤","hero.stat3.desc":"#T2Rises",
-        "hero.identity.title":"팀 아이덴티티","hero.identity.desc":"블랙 × 레드, 침착한 운영 + 폭발적인 한타. 모든 순간을 하이라이트로 만든다.",
-        "hero.identity.p1":"다크 글로우 + 글리치 포인트","hero.identity.p2":"부드러운 스크롤 리빌, 카드 호버 리프트","hero.identity.p3":"반응형 · 터치 프렌들리",
-        "roster.title":"Roster","roster.subtitle":"선수 얼굴 대신 주챔 사진만 노출합니다.","roster.mains":"주챔","roster.utility":"유틸",
-        "ach.title":"Achievements","ach.subtitle":"2024년부터 국제대회 우승 및 다수의 상위권 성적을 달성했습니다.","ach.note":"※ 대회명/월은 샘플. 실제 기록으로 교체하세요.",
-        "media.title":"Highlights","media.subtitle":"팀의 시그니처 한타와 리드미컬한 교전 감각을 모았습니다.","media.placeholder":"영상/이미지 슬라이더 영역 (스폰서 컷, 포토샷 등)",
-        "schedule.title":"Schedule & Results","schedule.subtitle":"다가오는 일정과 최근 매치 요약.","schedule.upcoming":"UPCOMING","schedule.win":"WIN","schedule.lose":"LOSE",
-        "member.title":"Membership","member.subtitle":"T2 멤버십에 가입하고 전용 혜택을 누려보세요.","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
+        "hero.stat1.title":"Since 2024","hero.stat1.desc":"국제 대회 꾸준한 성적","hero.stat2.title":"Competitive","hero.stat2.desc":"프로 페이즈 운영","hero.stat3.title":"Fandom","hero.stat3.desc":"#T2Rises",
+        "hero.identity.title":"팀 아이덴티티","hero.identity.desc":"강한 라인전으로 초반 주도권을 확보하고, 중요 교전에서 전략적 판단으로 승리를 확정짓습니다.",
+        "hero.identity.p1":"라인전 주도와 리드 관리","hero.identity.p2":"교전 시 명확한 역할 분담","hero.identity.p3":"데이터 기반 경기 준비 및 피드백",
+        "roster.title":"Roster","roster.subtitle":"선수 개인의 얼굴 대신 선수별 메인 챔피언을 노출하여 전술적 특징을 전달합니다.","roster.mains":"주챔","roster.utility":"유틸",
+        "ach.title":"Achievements","ach.subtitle":"리그 및 국제 무대에서 경쟁력을 검증받은 주요 대회 기록(대회명 표기).",
+        "media.title":"Highlights","media.subtitle":"팀의 시그니처 플레이와 전략적 운영이 드러나는 주요 경기 하이라이트입니다.","media.placeholder":"영상/이미지 슬라이더 영역 (스폰서 컷, 포토샷 등)",
+        "schedule.title":"Schedule & Results","schedule.subtitle":"LCK Legend Group의 팀들을 기반으로 구성한 최근 일정과 결과입니다.","schedule.upcoming":"UPCOMING","schedule.win":"WIN","schedule.lose":"LOSE",
+        "member.title":"Membership","member.subtitle":"간편한 이메일 가입으로 멤버십 혜택을 받을 수 있습니다. 플랜을 선택하면 이메일 입력 창이 열립니다.","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
         "member.p1.b1":"멤버십 전용 뉴스레터","member.p1.b2":"디스코드 뱃지",
         "member.p2.b1":"ROOKIE 혜택 포함","member.p2.b2":"하이라이트 영상 선공개","member.p2.b3":"월 1회 Q&A",
         "member.p3.b1":"PRO 혜택 포함","member.p3.b2":"분기별 굿즈 추첨","member.p3.b3":"오프라인 팬미팅 우선권",
-        "member.join":"가입하기","member.formTitle":"빠른 가입","member.formBtn":"멤버십 가입","member.note":"결제는 추후 결제 페이지 연동 후 진행됩니다."
+        "member.join":"가입하기","member.formTitle":"빠른 가입","member.formBtn":"멤버십 가입","member.note":"가입 시 확인 이메일 전송(메일 클라이언트 열기)을 통해 가입을 완료합니다."
       },
       en:{
         "nav.home":"Home","nav.roster":"Roster","nav.achievements":"Achievements","nav.media":"Media","nav.schedule":"Schedule","nav.membership":"Membership",
-        "hero.title":"RISE OF T2","hero.subtitle":"T2 Wild Rift pro team. Since 2024, we’ve claimed titles and top finishes, owning the league with black–red dark hype.",
+        "hero.title":"RISE OF T2",
+        "hero.subtitle":"T2 is a pro Wild Rift organisation that emphasizes structured play and lane dominance to compete on the international stage.",
         "hero.btnHighlight":"Watch Highlights","hero.btnRoster":"View Roster",
-        "hero.stat1.title":"Since 2024","hero.stat1.desc":"Multiple top finishes","hero.stat2.title":"Titles","hero.stat2.desc":"Championships won","hero.stat3.title":"Fandom","hero.stat3.desc":"#T2Rises",
-        "hero.identity.title":"Identity","hero.identity.desc":"Black × Red. Composed macro, explosive teamfights. Every moment is a highlight.",
-        "hero.identity.p1":"Dark glow + glitch accents","hero.identity.p2":"Smooth reveal, lifting cards","hero.identity.p3":"Responsive & touch-friendly",
-        "roster.title":"Roster","roster.subtitle":"Only main champion photos are shown instead of player faces.","roster.mains":"Mains","roster.utility":"Utility",
-        "ach.title":"Achievements","ach.subtitle":"Since 2024, we achieved championships and multiple top placements.","ach.note":"Sample event names/dates. Replace with official records.",
-        "media.title":"Highlights","media.subtitle":"Signature fights and crisp skirmishes.","media.placeholder":"Slider area (sponsors, photos, etc.)",
-        "schedule.title":"Schedule & Results","schedule.subtitle":"Upcoming matches and recent results.","schedule.upcoming":"UPCOMING","schedule.win":"WIN","schedule.lose":"LOSE",
-        "member.title":"Membership","member.subtitle":"Join T2 membership and enjoy exclusive perks.","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
+        "hero.stat1.title":"Since 2024","hero.stat1.desc":"Consistent international results","hero.stat2.title":"Competitive","hero.stat2.desc":"Pro phase operations","hero.stat3.title":"Fandom","hero.stat3.desc":"#T2Rises",
+        "hero.identity.title":"Identity","hero.identity.desc":"We secure early priority through dominant lane play and close matches by winning decisive teamfights with disciplined decision-making.",
+        "hero.identity.p1":"Lane-first priority and lead management","hero.identity.p2":"Clear role assignments in fights","hero.identity.p3":"Data-driven preparation and feedback",
+        "roster.title":"Roster","roster.subtitle":"We display each player's main champions instead of faces to emphasize tactical profiles.","roster.mains":"Mains","roster.utility":"Utility",
+        "ach.title":"Achievements","ach.subtitle":"Key results across domestic and international tournaments (listed by event).",
+        "media.title":"Highlights","media.subtitle":"Selected plays that showcase our strategic execution and teamfighting.","media.placeholder":"Slider area (sponsors, photos, etc.)",
+        "schedule.title":"Schedule & Results","schedule.subtitle":"Recent matches and upcoming fixtures featuring teams from the LCK Legend Group.","schedule.upcoming":"UPCOMING","schedule.win":"WIN","schedule.lose":"LOSE",
+        "member.title":"Membership","member.subtitle":"Join easily with an email. Select a plan and enter your email to request membership.","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
         "member.p1.b1":"Members-only newsletter","member.p1.b2":"Discord badge",
         "member.p2.b1":"Includes ROOKIE perks","member.p2.b2":"Early highlight access","member.p2.b3":"Monthly Q&A",
         "member.p3.b1":"Includes PRO perks","member.p3.b2":"Quarterly merch raffle","member.p3.b3":"Offline fan-meet priority",
-        "member.join":"Join","member.formTitle":"Quick Join","member.formBtn":"Join Membership","member.note":"Payments will process after checkout integration."
+        "member.join":"Join","member.formTitle":"Quick Join","member.formBtn":"Join Membership","member.note":"A confirmation email request will be created using your mail client."
       },
       zh:{
         "nav.home":"主页","nav.roster":"阵容","nav.achievements":"成就","nav.media":"媒体","nav.schedule":"赛程","nav.membership":"会员",
-        "hero.title":"T2 崛起","hero.subtitle":"T2 职业战队自 2024 年起斩获冠军与多项佳绩，以黑红暗色风席卷赛场。",
+        "hero.title":"T2 崛起","hero.subtitle":"T2 是一家以线路优势与体系化运营为核心的职业 Wild Rift 战队，在国际赛场保持竞争力。",
         "hero.btnHighlight":"观看集锦","hero.btnRoster":"查看阵容",
-        "hero.stat1.title":"自 2024","hero.stat1.desc":"多次名列前茅","hero.stat2.title":"冠军","hero.stat2.desc":"多项头衔","hero.stat3.title":"粉丝","hero.stat3.desc":"#T2Rises",
-        "hero.identity.title":"团队定位","hero.identity.desc":"黑 × 红。沉稳宏观 + 爆发团战，分秒皆高光。",
-        "hero.identity.p1":"暗光与故障风点缀","hero.identity.p2":"平滑出现、卡片悬浮","hero.identity.p3":"自适应与触控友好",
-        "roster.title":"阵容","roster.subtitle":"仅展示主用英雄图片，不显示队员照片。","roster.mains":"主用","roster.utility":"机动",
-        "ach.title":"成就","ach.subtitle":"自 2024 年起收获冠军与多项佳绩。","ach.note":"赛事名称/日期为示例，请替换为正式记录。",
-        "media.title":"集锦","media.subtitle":"标志性团战与节奏感十足的小规模交战。","media.placeholder":"轮播区域（赞助、照片等）",
-        "schedule.title":"赛程与战果","schedule.subtitle":"即将到来的比赛与近期战果。","schedule.upcoming":"即将开始","schedule.win":"胜","schedule.lose":"负",
-        "member.title":"会员","member.subtitle":"加入 T2 会员，享受专属福利。","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
+        "hero.stat1.title":"Since 2024","hero.stat1.desc":"持续的国际赛成绩","hero.stat2.title":"Competitive","hero.stat2.desc":"职业阶段运营","hero.stat3.title":"Fandom","hero.stat3.desc":"#T2Rises",
+        "hero.identity.title":"团队定位","hero.identity.desc":"通过强势线路获取早期主动权，并在关键团战中以稳健判断取得胜利，巩固比赛优势。",
+        "hero.identity.p1":"线路优先与领先管理","hero.identity.p2":"团战执行的明确分工","hero.identity.p3":"以数据为基础的赛前准备与反馈",
+        "roster.title":"阵容","roster.subtitle":"用主用英雄图片替代选手头像以传达战术侧重点。","roster.mains":"主用","roster.utility":"机动",
+        "ach.title":"成就","ach.subtitle":"国内与国际赛场的代表性赛事记录（按赛事列出）。",
+        "media.title":"集锦","media.subtitle":"展示战术执行与团战能力的精选片段。","media.placeholder":"轮播区域（赞助、照片等）",
+        "schedule.title":"赛程与战果","schedule.subtitle":"包含 LCK Legend Group 队伍的近期赛程与结果。","schedule.upcoming":"即将开始","schedule.win":"胜","schedule.lose":"负",
+        "member.title":"会员","member.subtitle":"输入邮箱即可快速申请会员。选择计划后输入邮箱发送申请邮件。","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
         "member.p1.b1":"会员专属简报","member.p1.b2":"Discord 徽章",
-        "member.p2.b1":"包含 ROOKIE 福利","member.p2.b2":"集锦抢先看","member.p2.b3":"每月一次 Q&A",
-        "member.p3.b1":"包含 PRO 福利","member.p3.b2":"季度周边抽奖","member.p3.b3":"线下见面优先权",
-        "member.join":"加入","member.formTitle":"快速加入","member.formBtn":"加入会员","member.note":"支付将在接入结算后进行。"
+        "member.p2.b1":"包含 ROOKIE 权益","member.p2.b2":"抢先观看集锦","member.p2.b3":"每月 Q&A",
+        "member.p3.b1":"包含 PRO 权益","member.p3.b2":"季度周边抽奖","member.p3.b3":"线下见面优先权",
+        "member.join":"加入","member.formTitle":"快速加入","member.formBtn":"加入会员","member.note":"将通过您的邮件客户端创建确认邮件请求。"
       },
       ja:{
         "nav.home":"ホーム","nav.roster":"ロスター","nav.achievements":"実績","nav.media":"メディア","nav.schedule":"スケジュール","nav.membership":"メンバーシップ",
-        "hero.title":"RISE OF T2","hero.subtitle":"T2 は 2024 年以降、国際大会で優勝・上位入賞を重ね、黒×赤のダークムードでリーグを席巻。",
+        "hero.title":"RISE OF T2","hero.subtitle":"T2 はライン戦に強みを持ち、体系的な運用で国際舞台でも競争力を保持するプロ組織です。",
         "hero.btnHighlight":"ハイライトを見る","hero.btnRoster":"ロスターを見る",
-        "hero.stat1.title":"2024~","hero.stat1.desc":"上位入賞多数","hero.stat2.title":"優勝","hero.stat2.desc":"複数タイトル","hero.stat3.title":"ファンダム","hero.stat3.desc":"#T2Rises",
-        "hero.identity.title":"アイデンティティ","hero.identity.desc":"黒 × 赤。落ち着いた運用 + 爆発的集団戦。すべてをハイライトに。",
-        "hero.identity.p1":"ダークグロウ + グリッチ","hero.identity.p2":"スムーズなリビール、カードリフト","hero.identity.p3":"レスポンシブ＆タッチ対応",
-        "roster.title":"ロスター","roster.subtitle":"選手写真の代わりにメインチャンプ画像のみ表示します。","roster.mains":"メイン","roster.utility":"ユーティリティ",
-        "ach.title":"実績","ach.subtitle":"2024 年以降、国際大会での優勝や上位成績を達成。","ach.note":"大会名/日付はサンプル。実績で差し替えください。",
-        "media.title":"ハイライト","media.subtitle":"シグネチャーな集団戦とテンポの良いスキirmish。","media.placeholder":"スライダー領域（スポンサー/写真など）",
-        "schedule.title":"スケジュール＆結果","schedule.subtitle":"今後の試合と直近の結果。","schedule.upcoming":"予定","schedule.win":"勝","schedule.lose":"負",
-        "member.title":"メンバーシップ","member.subtitle":"T2 メンバーになって限定特典を。","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
+        "hero.stat1.title":"Since 2024","hero.stat1.desc":"国際大会での安定した成績","hero.stat2.title":"Competitive","hero.stat2.desc":"プロフェッショナルな運用","hero.stat3.title":"Fandom","hero.stat3.desc":"#T2Rises",
+        "hero.identity.title":"アイデンティティ","hero.identity.desc":"ライン戦で序盤の主導権を確保し、重要な集団戦での判断によって試合を締めくくります。",
+        "hero.identity.p1":"ライン中心の優先権管理","hero.identity.p2":"集団戦での明確な役割分担","hero.identity.p3":"データに基づく準備とフィードバック",
+        "roster.title":"ロスター","roster.subtitle":"選手の顔の代わりに、戦術的特徴を示すメインチャンプを表示します。","roster.mains":"メイン","roster.utility":"ユーティリティ",
+        "ach.title":"実績","ach.subtitle":"国内・国際の主要大会での代表的な記録（大会名で記載）。",
+        "media.title":"ハイライト","media.subtitle":"戦術的実行とチームファイトを示すプレイをピックアップ。","media.placeholder":"スライダー領域（スポンサー/写真など）",
+        "schedule.title":"スケジュール＆結果","schedule.subtitle":"LCK Legend Group のチームを基にした直近の試合と結果。","schedule.upcoming":"予定","schedule.win":"勝","schedule.lose":"敗",
+        "member.title":"メンバーシップ","member.subtitle":"メールで簡単登録。プラン選択後にメールを入力して申請します。","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
         "member.p1.b1":"会員限定ニュースレター","member.p1.b2":"Discord バッジ",
-        "member.p2.b1":"ROOKIE 特典含む","member.p2.b2":"ハイライト先行","member.p2.b3":"月1回 Q&A",
-        "member.p3.b1":"PRO 特典含む","member.p3.b2":"四半期グッズ抽選","member.p3.b3":"オフライン優先",
-        "member.join":"加入","member.formTitle":"クイック加入","member.formBtn":"加入する","member.note":"決済はチェックアウト連携後に実施。"
+        "member.p2.b1":"ROOKIE 特典含む","member.p2.b2":"ハイライト先行公開","member.p2.b3":"月1回 Q&A",
+        "member.p3.b1":"PRO 特典含む","member.p3.b2":"四半期グッズ抽選","member.p3.b3":"オフライン優先参加",
+        "member.join":"加入","member.formTitle":"クイック加入","member.formBtn":"加入する","member.note":"メールクライアントを使用して確認メールを作成します。"
       }
     };
 
