@@ -188,7 +188,7 @@
         <a href="#membership" data-i18n="nav.membership" class="cta">Membership</a>
       </div>
       <div class="lang">
-        <span aria-hidden="true">🇰🇷</span>
+        <span aria-hidden="true">🌐</span>
         <select id="lang-switch" aria-label="언어 선택">
           <option value="ko">한국어</option>
           <option value="en">English</option>
@@ -233,28 +233,24 @@
     </div>
   </header>
 
-  <!-- sponsor marquee -->
-  <div class="sponsor-marquee">
-    <div class="sponsor-track">
-      <span>SK Telecom</span>
-      <span>Samsung Odyssey</span>
-      <span>Mercedes-Benz</span>
-      <span>Spotify</span>
-      <span>SteelSeries</span>
-      <span>Secret Lab</span>
-      <span>대웅제약</span>
-      <span>Dorco</span>
-      <span>SK Telecom</span>
-      <span>Samsung Odyssey</span>
-      <span>Mercedes-Benz</span>
-      <span>Spotify</span>
-      <span>SteelSeries</span>
-      <span>Secret Lab</span>
-      <span>대웅제약</span>
-      <span>Dorco</span>
+    <div class="marquee">
+    <div class="marquee-inner">
+      <!-- T1 스폰서와 유사한 대형 스폰서 표시 -->
+      <div class="partner">Samsung</div>
+      <div class="partner">Nike</div>
+      <div class="partner">Red Bull</div>
+      <div class="partner">Secretlab</div>
+      <div class="partner">Logitech G</div>
+      <div class="partner">Red Sea Global</div>
+      <div class="partner">Samsung</div>
+      <div class="partner">Nike</div>
+      <div class="partner">Red Bull</div>
+      <div class="partner">Secretlab</div>
+      <div class="partner">Logitech G</div>
+      <div class="partner">Red Sea Global</div>
     </div>
   </div>
-  
+
   <section id="roster">
     <div class="container">
       <h2 class="h2" data-i18n="roster.title">Roster</h2>
@@ -267,9 +263,9 @@
             <span class="name">Daniel</span>
           </div>
           <div class="champs-pics">
-            <div class="champ-thumb"><img src="assets/champs/yone.jpg" alt="요네"></div>
-            <div class="champ-thumb"><img src="assets/champs/yasuo.jpg" alt="야스오"></div>
-            <div class="champ-thumb"><img src="assets/champs/volibear.jpg" alt="볼리베어"></div>
+            <div class="champ-thumb"><img src="images/yone.jpg" alt="요네"></div>
+            <div class="champ-thumb"><img src="images/yasuo.jpg" alt="야스오"></div>
+            <div class="champ-thumb"><img src="images/volibear.jpg" alt="볼리베어"></div>
           </div>
           <div class="champions"><b data-i18n="roster.mains">주챔</b> 요네 · 야스오 · 볼리베어</div>
         </article>
@@ -281,9 +277,9 @@
             <span class="name">둔칫땃칫</span>
           </div>
           <div class="champs-pics">
-            <div class="champ-thumb"><img src="assets/champs/xin_zhao.jpg" alt="신짜오"></div>
-            <div class="champ-thumb"><img src="assets/champs/jarvan.jpg" alt="자르반 4세"></div>
-            <div class="champ-thumb"><img src="assets/champs/nocturne.jpg" alt="녹턴"></div>
+            <div class="champ-thumb"><img src="images/xin_zhao.jpg" alt="신짜오"></div>
+            <div class="champ-thumb"><img src="images/jarvan.jpg" alt="자르반 4세"></div>
+            <div class="champ-thumb"><img src="images/nocturne.jpg" alt="녹턴"></div>
           </div>
           <div class="champions"><b data-i18n="roster.mains">주챔</b> 신짜오 · 자르반 IV · 녹턴</div>
         </article>
@@ -295,11 +291,11 @@
             <span class="name">Boiledpotato</span>
           </div>
           <div class="champs-pics">
-            <div class="champ-thumb"><img src="assets/champs/ryze.jpg" alt="라이즈"></div>
-            <div class="champ-thumb"><img src="assets/champs/viktor.jpg" alt="빅토르"></div>
-            <div class="champ-thumb"><img src="assets/champs/syndra.jpg" alt="신드라"></div>
+            <div class="champ-thumb"><img src="images/ryze.jpg" alt="라이즈"></div>
+            <div class="champ-thumb"><img src="images/viktor.jpg" alt="빅토르"></div>
+            <div class="champ-thumb"><img src="images/aurora.jpg" alt="오로라"></div>
           </div>
-          <div class="champions"><b data-i18n="roster.mains">주챔</b> 라이즈 · 빅토르 · 신드라</div>
+          <div class="champions"><b data-i18n="roster.mains">주챔</b> 라이즈 · 빅토르 · 오로라</div>
         </article>
 
         <!-- ADC (수정) -->
@@ -309,9 +305,9 @@
             <span class="name">Kiwi</span>
           </div>
           <div class="champs-pics">
-            <div class="champ-thumb"><img src="assets/champs/ezreal.jpg" alt="이즈리얼"></div>
-            <div class="champ-thumb"><img src="assets/champs/corki.jpg" alt="코르키"></div>
-            <div class="champ-thumb"><img src="assets/champs/lucian.jpg" alt="루시안"></div>
+            <div class="champ-thumb"><img src="images/ezreal.jpg" alt="이즈리얼"></div>
+            <div class="champ-thumb"><img src="images/corki.jpg" alt="코르키"></div>
+            <div class="champ-thumb"><img src="images/lucian.jpg" alt="루시안"></div>
           </div>
           <div class="champions"><b data-i18n="roster.mains">주챔</b> 이즈리얼 · 코르키 · 루시안</div>
         </article>
@@ -323,9 +319,9 @@
             <span class="name">Kirakira</span>
           </div>
           <div class="champs-pics">
-            <div class="champ-thumb"><img src="assets/champs/leona.jpg" alt="레오나"></div>
-            <div class="champ-thumb"><img src="assets/champs/braum.jpg" alt="브라움"></div>
-            <div class="champ-thumb"><img src="assets/champs/shen.jpg" alt="쉔"></div>
+            <div class="champ-thumb"><img src="images/leona.jpg" alt="레오나"></div>
+            <div class="champ-thumb"><img src="images/braum.jpg" alt="브라움"></div>
+            <div class="champ-thumb"><img src="images/shen.jpg" alt="쉔"></div>
           </div>
           <div class="champions"><b data-i18n="roster.mains">주챔</b> 레오나 · 브라움 · 쉔</div>
         </article>
@@ -337,8 +333,8 @@
             <span class="name">Kaka</span>
           </div>
           <div style="padding:0 16px 16px;color:#c9cad1;font-size:14px">
-            <div style="margin-bottom:6px"><b data-i18n="roster.utility">유틸</b></div>
-            <div style="color:#b9bac0">전 라인 커버 가능한 멀티롤 플레이어 — 팀 전략에 따라 탑/정글/서포트 등 필요한 포지션을 유연하게 지원합니다.</div>
+            <div style="margin-bottom:6px"><b data-i18n="roster.utility">식스맨</b></div>
+            <div style="color:#b9bac0">전 라인 커버 가능한 멀티롤 플레이어 — 팀 전략 및 상황에 따라 필요한 포지션을 유연하게 플레이합니다.</div>
           </div>
         </article>
       </div>
@@ -352,7 +348,7 @@
       <div class="timeline">
         <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.04</b> LCK Spring — 우승</div></div>
         <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.05</b> MSI (Mid-Season Invitational) — 준우승</div></div>
-        <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.10</b> World Championship (Worlds) — 4강</div></div>
+        <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.11</b> World Championship (Worlds) — 우승</div></div>
         <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2025.07</b> Esports World Cup (EWC) — 챔피언</div></div>
       </div>
     </div>
@@ -389,7 +385,7 @@
       <div class="plans">
         <div class="plan reveal">
           <h3 data-i18n="member.plan1">ROOKIE</h3>
-          <div class="price">₩3,900/월</div>
+          <div class="price">₩4,900/월</div>
           <ul>
             <li data-i18n="member.p1.b1">멤버십 전용 뉴스레터</li>
             <li data-i18n="member.p1.b2">디스코드 뱃지</li>
