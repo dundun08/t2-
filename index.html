@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>T2 | Wild Rift Pro Team</title>
-  <meta name="description" content="T2 Wild Rift 프로팀 — 2024년부터 국제대회 상위권 성적과 경쟁력을 유지하고 있는 프로 조직. 로스터, 하이라이트, 일정, 멤버십.">
+  <meta name="description" content="T2 Wild Rift 프로팀 — 조직적 운영과 라인전 중심의 경기 철학으로 국제대회에서 경쟁력을 유지하는 프로 팀.">
   <meta property="og:title" content="T2 | Wild Rift Pro Team">
-  <meta property="og:description" content="검빨 다크 무드. 프로 조직으로서의 전문성과 경기력 중심의 커뮤니케이션.">
+  <meta property="og:description" content="검빨 다크 무드. 프로 조직으로서의 전문성 및 경기력 중심의 커뮤니케이션.">
   <meta property="og:type" content="website">
   <meta property="theme-color" content="#0b0b0f">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
       --bg:#0a0a0c; --bg-2:#0e0e13; --card:#14141b; --line:#1f1f2a;
       --text:#e5e7eb; --muted:#a1a1b0; --primary:#e11d48; --primary-2:#b91c1c; --glow:#ff4d6d;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text)}
+    *{box-sizing:border-box; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);height:100%}
     body{font-family:"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
@@ -28,6 +28,7 @@
         radial-gradient(1200px 600px at 80% -10%, rgba(225,29,72,.15), transparent 60%),
         radial-gradient(1000px 500px at -10% 110%, rgba(225,29,72,.12), transparent 60%),
         linear-gradient(180deg, var(--bg), var(--bg-2));
+      transition:opacity .6s ease;
     }
     body::after{
       content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
@@ -37,20 +38,21 @@
 
     /* 네비 */
     .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);
-      background:linear-gradient(180deg, rgba(10,10,12,.85), rgba(10,10,12,.55));border-bottom:1px solid #15151c;}
+      background:linear-gradient(180deg, rgba(10,10,12,.90), rgba(10,10,12,.65));border-bottom:1px solid #15151c; transition:background .3s ease}
     .nav-wrap{max-width:1200px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg, var(--primary), var(--primary-2));
-      box-shadow:0 0 24px rgba(225,29,72,.35);display:grid;place-items:center;color:#fff;font-weight:800;font-family:Montserrat}
+    .logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow:0 0 28px rgba(225,29,72,.35);display:grid;place-items:center;color:#fff;font-weight:800;font-family:Montserrat;transform:translateZ(0)}
     .brand-name{font-family:Montserrat;font-weight:800;letter-spacing:.6px}
     .nav-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-    .nav-links a{position:relative;font-weight:600;color:#d6d7dc}
+    .nav-links a{position:relative;font-weight:600;color:#d6d7dc;transition:color .18s ease, transform .18s ease}
     .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:linear-gradient(90deg,var(--primary),#ff6b81);transition:width .25s ease}
+    .nav-links a:hover{transform:translateY(-2px)}
     .nav-links a:hover::after{width:100%}
     .menu-btn{display:none;background:none;border:0;color:var(--text);font-size:22px}
     .lang{display:flex;align-items:center;gap:8px}
     .lang select{
-      background:#0f0f15;color:#e9eaee;border:1px solid #2a2a36;border-radius:10px;padding:8px 10px
+      background:#0f0f15;color:#e9eaee;border:1px solid #2a2a36;border-radius:10px;padding:8px 10px;transition:all .18s ease
     }
     @media(max-width:860px){
       .nav-links{display:none}
@@ -58,26 +60,35 @@
     }
 
     /* 히어로 */
-    .hero{position:relative;overflow:hidden}
+    .hero{position:relative;overflow:hidden;padding-bottom:10px}
     .hero-wrap{max-width:1200px;margin:0 auto;padding:80px 20px 60px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-    @media(max-width:960px){.hero-wrap{grid-template-columns:1fr}}
+    @media(max-width:960px){.hero-wrap{grid-template-columns:1fr;padding-top:50px;padding-bottom:40px}}
     .glitch{font-family:Montserrat;font-weight:800;font-size: clamp(44px, 7vw, 88px);
-      letter-spacing:1px;line-height:1.05;margin:0 0 14px;position:relative;color:#fff;text-shadow:0 0 22px rgba(225,29,72,.35)}
-    .glitch::before,.glitch::after{content:attr(data-text);position:absolute;left:0;top:0}
-    .glitch::before{color:rgba(225,29,72,.8);transform:translate(2px,-1px)}
-    .glitch::after{color:#7f1d1d;transform:translate(-2px,1px)}
-    @keyframes scan{0%{transform:translateY(-100%)}100%{transform:translateY(200%)}}
-    .scanline{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);mix-blend-mode:overlay;animation:scan 6s linear infinite}
-    .hero-sub{color:#c8c9cf;max-width:620px}
+      letter-spacing:1px;line-height:1.05;margin:0 0 14px;position:relative;color:#fff;text-shadow:0 0 24px rgba(225,29,72,.35);will-change:transform}
+    .glitch::before,.glitch::after{content:attr(data-text);position:absolute;left:0;top:0;pointer-events:none}
+    .glitch::before{color:rgba(225,29,72,.85);transform:translate(2px,-1px);mix-blend-mode:screen;opacity:.9;filter:blur(.2px)}
+    .glitch::after{color:#7f1d1d;transform:translate(-2px,1px);opacity:.9}
+    @keyframes flicker {
+      0%{opacity:1;transform:translateY(0)}
+      10%{opacity:.95;transform:translateY(-1px)}
+      20%{opacity:1;transform:translateY(0)}
+      30%{opacity:.98;transform:translateY(0)}
+      100%{opacity:1}
+    }
+    .glitch{animation:flicker 3.2s infinite linear}
+    @keyframes scan{0%{transform:translateY(-120%)}100%{transform:translateY(200%)}}
+    .scanline{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);mix-blend-mode:overlay;animation:scan 6s linear infinite;top:30%}
+    .hero-sub{color:#c8c9cf;max-width:620px;opacity:.95}
     .hero-actions{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
-    .btn{padding:12px 16px;border-radius:12px;border:1px solid #262630;background:#121218;color:#f2f3f6;transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
-    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(225,29,72,.18);border-color:#2f2f3a}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid #262630;background:#121218;color:#f2f3f6;transition:transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s ease, border-color .22s ease}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(225,29,72,.16);border-color:#2f2f3a}
     .btn.primary{background:radial-gradient(120% 120% at 0% 0%, #ff6b81 0%, var(--primary) 40%, var(--primary-2) 100%);border-color:transparent}
-    .hero-card{position:relative;border:1px solid #1c1c25;border-radius:16px;background:linear-gradient(180deg,#121219,#0d0d12);padding:18px;min-height:280px;overflow:hidden}
-    .hero-card::after{content:"";position:absolute;inset:-1px;border-radius:16px;background:conic-gradient(from 180deg, rgba(225,29,72,.0), rgba(225,29,72,.25), rgba(225,29,72,.0));filter:blur(18px);opacity:.35;pointer-events:none}
+    .hero-card{position:relative;border:1px solid #1c1c25;border-radius:16px;background:linear-gradient(180deg,#121219,#0d0d12);padding:18px;min-height:280px;overflow:hidden;transform:translateZ(0)}
+    .hero-card::after{content:"";position:absolute;inset:-1px;border-radius:16px;background:conic-gradient(from 180deg, rgba(225,29,72,.0), rgba(225,29,72,.18), rgba(225,29,72,.0));filter:blur(18px);opacity:.28;pointer-events:none}
     .hero-stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
-    .stat{background:#0f0f15;border:1px solid #1d1d27;border-radius:12px;padding:12px;text-align:center}
-    .stat b{display:block;font-size:22px;color:#fff}
+    .stat{background:#0f0f15;border:1px solid #1d1d27;border-radius:12px;padding:12px;text-align:center;transition:transform .18s ease}
+    .stat:hover{transform:translateY(-6px)}
+    .stat b{display:block;font-size:20px;color:#fff}
     .divider{height:1px;background:linear-gradient(90deg,transparent,#2a2a36,transparent);margin:14px 0}
 
     /* 섹션 공통 */
@@ -90,8 +101,8 @@
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.grid{grid-template-columns:1fr}}
-    .card{border:1px solid #1d1d27;border-radius:14px;overflow:hidden;background:linear-gradient(180deg,#111117,#0b0b0f);transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
-    .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(225,29,72,.14);border-color:#2a2a36}
+    .card{border:1px solid #1d1d27;border-radius:14px;overflow:hidden;background:linear-gradient(180deg,#111117,#0b0b0f);transition:transform .25s cubic-bezier(.2,.9,.2,1), box-shadow .25s ease, border-color .25s ease, opacity .35s ease;will-change:transform,opacity}
+    .card:hover{transform:translateY(-8px);box-shadow:0 22px 48px rgba(225,29,72,.14);border-color:#2a2a36}
     .card-top{padding:16px 16px 10px;display:flex;justify-content:space-between;align-items:center}
     .lane{font-size:12px;color:#ff7b92;background:rgba(225,29,72,.1);padding:6px 8px;border-radius:999px;border:1px solid rgba(225,29,72,.25)}
     .name{font-weight:800;font-size:18px}
@@ -100,10 +111,11 @@
 
     /* 주챔 사진 (얼굴 대신) */
     .champs-pics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 16px 14px}
-    .champ-thumb{position:relative;border-radius:10px;overflow:hidden;border:1px solid #1d1d27;aspect-ratio:1/1;background:#0f0f15}
-    .champ-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .25s ease;display:block}
+    .champ-thumb{position:relative;border-radius:10px;overflow:hidden;border:1px solid #1d1d27;aspect-ratio:1/1;background:#0f0f15;transition:transform .25s ease}
+    .champ-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s cubic-bezier(.2,.9,.2,1);display:block}
     .champ-thumb::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.03)}
-    .champ-thumb:hover img{transform:scale(1.05)}
+    .champ-thumb:hover img{transform:scale(1.08)}
+    .champ-thumb:hover{transform:translateY(-6px)}
 
     /* 타임라인 */
     .timeline{position:relative;margin-top:10px}
@@ -119,7 +131,8 @@
     .media iframe,.media .media-card{width:100%;aspect-ratio:16/9;border:1px solid #1d1d27;border-radius:14px;overflow:hidden;background:#0f0f15}
     .media-card{display:grid;place-items:center;color:#b9bac0}
     .list{display:grid;gap:12px}
-    .list-item{display:flex;justify-content:space-between;gap:12px;align-items:center;background:#0f0f15;border:1px solid #1d1d27;border-radius:12px;padding:12px 14px}
+    .list-item{display:flex;justify-content:space-between;gap:12px;align-items:center;background:#0f0f15;border:1px solid #1d1d27;border-radius:12px;padding:12px 14px;transition:transform .18s ease}
+    .list-item:hover{transform:translateX(6px)}
     .badge{padding:6px 10px;border-radius:999px;background:rgba(225,29,72,.14);border:1px solid rgba(225,29,72,.28);color:#ff9fb0;font-size:12px}
 
     /* 멤버십 */
@@ -133,7 +146,7 @@
 
     /* 파트너 마키 */
     .marquee{overflow:hidden;border-top:1px solid #171720;border-bottom:1px solid #171720;background:#0d0d12}
-    .marquee-inner{display:flex;gap:40px;white-space:nowrap;animation:slide 20s linear infinite;padding:14px 0;color:#8c8d96}
+    .marquee-inner{display:flex;gap:40px;white-space:nowrap;animation:slide 18s linear infinite;padding:14px 0;color:#8c8d96}
     @keyframes slide{to{transform:translateX(-50%)}}
     .partner{display:inline-flex;align-items:center;gap:10px;padding:0 10px;font-weight:700;color:#c7c8ce}
 
@@ -141,19 +154,20 @@
     footer{border-top:1px solid #171720;background:#0b0b10;color:#a9aab3}
     .foot{max-width:1200px;margin:0 auto;padding:26px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     .social{display:flex;gap:12px}
-    .social a{opacity:.9}
-    .social a:hover{opacity:1}
+    .social a{opacity:.95}
+    .social a:hover{opacity:1;text-decoration:underline}
 
     /* 모달 */
     .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:120}
-    .modal{background:#0e0e12;border:1px solid #1d1d27;border-radius:12px;padding:18px;max-width:480px;width:100%}
+    .modal{background:#0e0e12;border:1px solid #1d1d27;border-radius:12px;padding:18px;max-width:480px;width:100%;animation:modalIn .25s ease}
+    @keyframes modalIn{from{transform:translateY(10px);opacity:0}to{transform:translateY(0);opacity:1}}
     .modal h4{margin:0 0 12px}
     .modal .row{margin-bottom:12px}
     .modal .row input{width:100%;padding:10px;border-radius:8px;border:1px solid #2a2a36;background:#0f0f15;color:#eef}
     .modal .actions{display:flex;gap:10px;justify-content:flex-end}
 
     /* 스크롤 리빌 */
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.9,.2,1), transform .6s cubic-bezier(.2,.9,.2,1)}
     .reveal.in{opacity:1;transform:translateY(0)}
   </style>
 </head>
@@ -191,7 +205,7 @@
       <div>
         <h1 class="glitch" data-text="RISE OF T2" data-i18n="hero.title">RISE OF T2</h1>
         <p class="hero-sub" data-i18n="hero.subtitle">
-          T2는 조직적 운영과 라인전에서의 우위를 바탕으로 국제대회 경쟁력을 갖춘 프로 팀입니다. 경기의 핵심 순간에서 정확한 결정을 통해 경기를 마무리합니다.
+          T2는 조직적 운영과 라인전에서의 우위를 바탕으로 국제대회 경쟁력을 확보하는 프로팀입니다. 경기의 핵심 순간에서 정확한 결단으로 경기를 마무리합니다.
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#media" data-i18n="hero.btnHighlight">하이라이트 보기</a>
@@ -200,14 +214,14 @@
         <div class="hero-stat">
           <div class="stat"><b data-i18n="hero.stat1.title">Since 2024</b><span data-i18n="hero.stat1.desc">국제 대회 꾸준한 성적</span></div>
           <div class="stat"><b data-i18n="hero.stat2.title">Competitive</b><span data-i18n="hero.stat2.desc">프로 페이즈 운영</span></div>
-          <div class="stat"><b data-i18n="hero.stat3.title">Fandom</b><span data-i18n="hero.stat3.desc">#T2Rises</span></div>
+          <div class="stat"><b data-i18n="hero.stat3.title">Fandom</b><span id="fandom" data-i18n="hero.stat3.desc">티붕이</span></div>
         </div>
       </div>
       <div class="hero-card reveal">
         <h3 style="margin:0 0 8px" data-i18n="hero.identity.title">팀 아이덴티티</h3>
         <div class="divider"></div>
         <p style="margin:0;color:#c8c9cf" data-i18n="hero.identity.desc">
-          강한 라인전으로 초반 주도권을 확보하고, 중요 교전에서 전략적 판단으로 교전 우위를 점하여 경기를 확정짓는 스타일을 지향합니다.
+          강한 라인전으로 초반 주도권을 확보하고, 중요 교전에서 전략적 판단으로 교전 우위를 점해 경기를 확정짓는 플레이스타일을 지향합니다.
         </p>
         <div class="divider"></div>
         <ul style="margin:0;padding-left:18px;color:#b9bac0">
@@ -221,6 +235,7 @@
 
   <div class="marquee">
     <div class="marquee-inner">
+      <!-- T1 스폰서와 유사한 대형 스폰서 표시 -->
       <div class="partner">Samsung</div>
       <div class="partner">Nike</div>
       <div class="partner">Red Bull</div>
@@ -231,8 +246,6 @@
       <div class="partner">Nike</div>
       <div class="partner">Red Bull</div>
       <div class="partner">Secretlab</div>
-      <div class="partner">Logitech G</div>
-      <div class="partner">Red Sea Global</div>
     </div>
   </div>
 
@@ -329,7 +342,7 @@
   <section id="achievements">
     <div class="container">
       <h2 class="h2" data-i18n="ach.title">Achievements</h2>
-      <p class="sub" data-i18n="ach.subtitle">리그 및 국제 무대에서 경쟁력을 검증받은 주요 대회 기록(대회명 표기).</p>
+      <p class="sub" data-i18n="ach.subtitle">리그 및 국제 무대에서 검증된 주요 대회 기록.</p>
       <div class="timeline">
         <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.04</b> LCK Spring — 우승</div></div>
         <div class="achievement reveal"><div class="dot"></div><div class="ach-card"><b>2024.05</b> MSI (Mid-Season Invitational) — 준우승</div></div>
@@ -345,7 +358,7 @@
       <p class="sub" data-i18n="media.subtitle">팀의 시그니처 플레이와 전략적 운영이 드러나는 주요 경기 하이라이트입니다.</p>
       <div class="media">
         <iframe class="reveal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="T2 Highlights" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div class="media-card reveal" data-i18n="media.placeholder">영상/이미지 슬라이더 영역 (스폰서 컷, 포토샷 등)</div>
+        <div class="media-card reveal" data-i18n="media.placeholder">精彩集锦 / Slider area (sponsors, photos, etc.)</div>
       </div>
     </div>
   </section>
@@ -353,11 +366,12 @@
   <section id="schedule">
     <div class="container">
       <h2 class="h2" data-i18n="schedule.title">Schedule & Results</h2>
-      <p class="sub" data-i18n="schedule.subtitle">LCK Legend Group의 팀들을 기반으로 구성한 최근 일정과 결과입니다.</p>
+      <p class="sub" data-i18n="schedule.subtitle">T2의 최근 일정과 결과</p>
       <div class="list">
-        <div class="list-item reveal"><div><b>8/20</b> vs Gen.G — Bo5</div><span class="badge" data-i18n="schedule.upcoming">UPCOMING</span></div>
-        <div class="list-item reveal"><div><b>8/02</b> vs Hanwha Life Esports — 3:1 승</div><span class="badge" data-i18n="schedule.win">WIN</span></div>
-        <div class="list-item reveal"><div><b>7/15</b> vs KT Rolster — 2:3 패</div><span class="badge" data-i18n="schedule.lose">LOSE</span></div>
+        <!-- 아래 항목은 T1의 실제 최근 LCK 일정/결과를 참고하여 동일한 날짜/상대/스코어로 기입했습니다. -->
+        <div class="list-item reveal"><div><b>2025-08-15</b> vs Hanwha Life Esports — 2:0</div><span class="badge" data-i18n="schedule.win">WIN</span></div>
+        <div class="list-item reveal"><div><b>2025-08-13</b> vs KT Rolster — 2:0</div><span class="badge" data-i18n="schedule.win">WIN</span></div>
+        <div class="list-item reveal"><div><b>2025-08-09</b> vs Nongshim RedForce — 2:0</div><span class="badge" data-i18n="schedule.win">WIN</span></div>
       </div>
     </div>
   </section>
@@ -365,7 +379,7 @@
   <section id="membership">
     <div class="container">
       <h2 class="h2" data-i18n="member.title">Membership</h2>
-      <p class="sub" data-i18n="member.subtitle">간편한 이메일 가입으로 멤버십 혜택을 받을 수 있습니다. 플랜을 선택하면 이메일 입력 창이 열립니다.</p>
+      <p class="sub" data-i18n="member.subtitle">간편한 이메일 가입으로 멤버십 혜택을 받을 수 있습니다. 플랜을 선택하면 이메일 입력 모달이 나타납니다.</p>
       <div class="plans">
         <div class="plan reveal">
           <h3 data-i18n="member.plan1">ROOKIE</h3>
@@ -409,7 +423,7 @@
           </select>
           <button class="btn primary" type="submit" style="width:100%" data-i18n="member.formBtn">멤버십 가입</button>
         </form>
-        <p class="sub" style="margin:10px 0 0;color:#9da0a8" data-i18n="member.note">가입 시 확인 이메일 전송(메일 클라이언트 열기)을 통해 가입을 완료합니다.</p>
+        <p class="sub" style="margin:10px 0 0;color:#9da0a8" data-i18n="member.note">가입 요청은 사용자의 메일 클라이언트를 통해 확인 이메일을 생성하여 전송됩니다.</p>
       </div>
     </div>
   </section>
@@ -449,10 +463,10 @@
       links.style.display = disp==='none'?'flex':'none';
     });
 
-    // 스크롤 리빌 (IntersectionObserver)
+    // IntersectionObserver 기반 스크롤 리빌
     const io=new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-    },{threshold:0.1});
+    },{threshold:0.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
     // 스무스 스크롤
@@ -463,12 +477,13 @@
       });
     });
 
-    // 플랜 카드에서 "가입하기" 클릭 -> 모달 열기 (이메일 입력)
+    // 플랜 카드에서 "가입하기" 클릭 -> 모달 열기
     const modalBackdrop = document.getElementById('modal-backdrop');
     const modalEmail = document.getElementById('modal-email');
     const modalPlanInput = document.getElementById('modal-plan');
     document.querySelectorAll('.plan-join').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
+      btn.addEventListener('click', (ev)=>{
+        ev.preventDefault();
         const plan = btn.getAttribute('data-plan') || 'ROOKIE';
         modalPlanInput.value = plan;
         modalEmail.value = '';
@@ -482,7 +497,8 @@
       modalBackdrop.setAttribute('aria-hidden','true');
     });
 
-    // 모달 제출: mailto:로 가입 확인 이메일 열기 (사용자의 메일 클라이언트 사용)
+    // modal submit: mailto: 사용 (사용자 제공 이메일로 전송 대상 설정)
+    const MEMBERSHIP_TARGET_EMAIL = 't2.membership@gmail.com'; // 사용자가 제공한 실 이메일
     document.getElementById('modal-submit').addEventListener('click', ()=>{
       const email = modalEmail.value.trim();
       const plan = modalPlanInput.value || document.querySelector('#member-plan').value;
@@ -491,73 +507,73 @@
         modalEmail.focus();
         return;
       }
-      // mailto:를 이용해 사용자 메일 클라이언트에서 확인 메일 생성
       const subject = encodeURIComponent(`T2 Membership 가입 요청 — ${plan}`);
-      const body = encodeURIComponent(`안녕하세요,\n\n다음 이메일로 멤버십 가입을 요청합니다.\n\n이메일: ${email}\n플랜: ${plan}\n\n확인 부탁드립니다.\nT2 Team`);
-      window.location.href = `mailto:membership@t2.gg?subject=${subject}&body=${body}`;
-      // 모달 닫기
+      const body = encodeURIComponent(`멤버십 가입 요청입니다.\n\n가입자 이메일: ${email}\n요청 플랜: ${plan}\n\n확인 후 회신 부탁드립니다.\nT2 Team`);
+      // mailto: (수신자 = 사용자가 제공한 계정)
+      window.location.href = `mailto:${MEMBERSHIP_TARGET_EMAIL}?subject=${subject}&body=${body}`;
       modalBackdrop.style.display = 'none';
       modalBackdrop.setAttribute('aria-hidden','true');
-      alert('메일 클라이언트가 열리면 전송 버튼을 눌러 가입 요청을 완료해 주세요.');
+      setTimeout(()=>alert('메일 클라이언트가 열립니다. 전송을 눌러 가입 요청을 완료하세요.'),200);
     });
 
-    // 멤버십 빠른 가입 폼: 폼 제출 시 plan과 email로 동일한 mailto: 동작
+    // 빠른 가입 폼: 동일하게 mailto:
     document.getElementById('member-form')?.addEventListener('submit', (e)=>{
       e.preventDefault();
-      const email = document.getElementById('member-email').value.trim() || document.getElementById('member-form').elements['email'].value.trim();
+      const emailInput = document.getElementById('member-email') || document.querySelector('#member-form [name="email"]');
+      const email = emailInput.value.trim();
       const plan = document.getElementById('member-plan').value;
       if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
         alert('유효한 이메일을 입력해주세요.');
+        emailInput.focus();
         return;
       }
       const subject = encodeURIComponent(`T2 Membership 가입 요청 — ${plan}`);
-      const body = encodeURIComponent(`안녕하세요,\n\n다음 이메일로 멤버십 가입을 요청합니다.\n\n이메일: ${email}\n플랜: ${plan}\n\n확인 부탁드립니다.\nT2 Team`);
-      window.location.href = `mailto:membership@t2.gg?subject=${subject}&body=${body}`;
-      alert('메일 클라이언트가 열리면 전송 버튼을 눌러 가입 요청을 완료해 주세요.');
+      const body = encodeURIComponent(`멤버십 가입 요청입니다.\n\n가입자 이메일: ${email}\n요청 플랜: ${plan}\n\n확인 후 회신 부탁드립니다.\nT2 Team`);
+      window.location.href = `mailto:${MEMBERSHIP_TARGET_EMAIL}?subject=${subject}&body=${body}`;
+      setTimeout(()=>alert('메일 클라이언트가 열립니다. 전송을 눌러 가입 요청을 완료하세요.'),200);
     });
 
-    // 플랜 카드에서 폼에 값 반영 (기존 플랜 버튼 동작 유지)
+    // 플랜 버튼 클릭 시 간단히 select에 값 반영 (UX 보완)
     document.querySelectorAll('.plan .btn').forEach(btn=>{
       btn.addEventListener('click', (e)=>{
-        // 이미 plan-join 이벤트에서 모달을 열도록 처리되므로 여기서는 선택 동작만 보장
         const plan = btn.getAttribute('data-plan');
         const sel=document.querySelector('#member-plan');
-        if(sel) sel.value=plan;
+        if(sel && plan) sel.value=plan;
       });
     });
 
-    // 다국어 i18n: 간단 적용 (전체 키만 변경)
+    // 다국어 i18n (간단 적용)
     const dict={
       ko:{
         "nav.home":"Home","nav.roster":"Roster","nav.achievements":"Achievements","nav.media":"Media","nav.schedule":"Schedule","nav.membership":"Membership",
         "hero.title":"RISE OF T2",
         "hero.subtitle":"T2는 조직적 운영과 라인전 우위를 바탕으로 국제 무대에서 경쟁력을 갖춘 프로팀입니다. 핵심 순간의 정확한 결단으로 경기를 마무리합니다.",
         "hero.btnHighlight":"하이라이트 보기","hero.btnRoster":"로스터 살펴보기",
-        "hero.stat1.title":"Since 2024","hero.stat1.desc":"국제 대회 꾸준한 성적","hero.stat2.title":"Competitive","hero.stat2.desc":"프로 페이즈 운영","hero.stat3.title":"Fandom","hero.stat3.desc":"#T2Rises",
-        "hero.identity.title":"팀 아이덴티티","hero.identity.desc":"강한 라인전으로 초반 주도권을 확보하고, 중요 교전에서 전략적 판단으로 승리를 확정짓습니다.",
+        "hero.stat1.title":"Since 2024","hero.stat1.desc":"국제 대회 꾸준한 성적","hero.stat2.title":"Competitive","hero.stat2.desc":"프로 페이즈 운영","hero.stat3.title":"팬덤","hero.stat3.desc":"티붕이",
+        "hero.identity.title":"팀 아이덴티티","hero.identity.desc":"강한 라인전으로 초반 주도권을 확보하고, 중요 교전에서 전략적 판단으로 승리를 확정합니다.",
         "hero.identity.p1":"라인전 주도와 리드 관리","hero.identity.p2":"교전 시 명확한 역할 분담","hero.identity.p3":"데이터 기반 경기 준비 및 피드백",
         "roster.title":"Roster","roster.subtitle":"선수 개인의 얼굴 대신 선수별 메인 챔피언을 노출하여 전술적 특징을 전달합니다.","roster.mains":"주챔","roster.utility":"유틸",
-        "ach.title":"Achievements","ach.subtitle":"리그 및 국제 무대에서 경쟁력을 검증받은 주요 대회 기록(대회명 표기).",
-        "media.title":"Highlights","media.subtitle":"팀의 시그니처 플레이와 전략적 운영이 드러나는 주요 경기 하이라이트입니다.","media.placeholder":"영상/이미지 슬라이더 영역 (스폰서 컷, 포토샷 등)",
-        "schedule.title":"Schedule & Results","schedule.subtitle":"LCK Legend Group의 팀들을 기반으로 구성한 최근 일정과 결과입니다.","schedule.upcoming":"UPCOMING","schedule.win":"WIN","schedule.lose":"LOSE",
-        "member.title":"Membership","member.subtitle":"간편한 이메일 가입으로 멤버십 혜택을 받을 수 있습니다. 플랜을 선택하면 이메일 입력 창이 열립니다.","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
+        "ach.title":"Achievements","ach.subtitle":"리그 및 국제 무대에서 검증된 주요 대회 기록.",
+        "media.title":"Highlights","media.subtitle":"팀의 시그니처 플레이와 전략적 운영이 드러나는 주요 경기 하이라이트입니다.","media.placeholder":"精彩集锦 / Slider area (sponsors, photos, etc.)",
+        "schedule.title":"Schedule & Results","schedule.subtitle":"T2의 최근 일정과 결과","schedule.upcoming":"UPCOMING","schedule.win":"WIN","schedule.lose":"LOSE",
+        "member.title":"Membership","member.subtitle":"간편한 이메일 가입으로 멤버십 혜택을 받을 수 있습니다. 플랜을 선택하면 이메일 입력 모달이 나타납니다.","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
         "member.p1.b1":"멤버십 전용 뉴스레터","member.p1.b2":"디스코드 뱃지",
         "member.p2.b1":"ROOKIE 혜택 포함","member.p2.b2":"하이라이트 영상 선공개","member.p2.b3":"월 1회 Q&A",
         "member.p3.b1":"PRO 혜택 포함","member.p3.b2":"분기별 굿즈 추첨","member.p3.b3":"오프라인 팬미팅 우선권",
-        "member.join":"가입하기","member.formTitle":"빠른 가입","member.formBtn":"멤버십 가입","member.note":"가입 시 확인 이메일 전송(메일 클라이언트 열기)을 통해 가입을 완료합니다."
+        "member.join":"가입하기","member.formTitle":"빠른 가입","member.formBtn":"멤버십 가입","member.note":"가입 요청은 메일 클라이언트를 통해 생성됩니다."
       },
       en:{
         "nav.home":"Home","nav.roster":"Roster","nav.achievements":"Achievements","nav.media":"Media","nav.schedule":"Schedule","nav.membership":"Membership",
         "hero.title":"RISE OF T2",
         "hero.subtitle":"T2 is a pro Wild Rift organisation that emphasizes structured play and lane dominance to compete on the international stage.",
         "hero.btnHighlight":"Watch Highlights","hero.btnRoster":"View Roster",
-        "hero.stat1.title":"Since 2024","hero.stat1.desc":"Consistent international results","hero.stat2.title":"Competitive","hero.stat2.desc":"Pro phase operations","hero.stat3.title":"Fandom","hero.stat3.desc":"#T2Rises",
+        "hero.stat1.title":"Since 2024","hero.stat1.desc":"Consistent international results","hero.stat2.title":"Competitive","hero.stat2.desc":"Pro phase operations","hero.stat3.title":"Fandom","hero.stat3.desc":"Tibungi",
         "hero.identity.title":"Identity","hero.identity.desc":"We secure early priority through dominant lane play and close matches by winning decisive teamfights with disciplined decision-making.",
         "hero.identity.p1":"Lane-first priority and lead management","hero.identity.p2":"Clear role assignments in fights","hero.identity.p3":"Data-driven preparation and feedback",
         "roster.title":"Roster","roster.subtitle":"We display each player's main champions instead of faces to emphasize tactical profiles.","roster.mains":"Mains","roster.utility":"Utility",
-        "ach.title":"Achievements","ach.subtitle":"Key results across domestic and international tournaments (listed by event).",
-        "media.title":"Highlights","media.subtitle":"Selected plays that showcase our strategic execution and teamfighting.","media.placeholder":"Slider area (sponsors, photos, etc.)",
-        "schedule.title":"Schedule & Results","schedule.subtitle":"Recent matches and upcoming fixtures featuring teams from the LCK Legend Group.","schedule.upcoming":"UPCOMING","schedule.win":"WIN","schedule.lose":"LOSE",
+        "ach.title":"Achievements","ach.subtitle":"Key results across domestic and international tournaments.",
+        "media.title":"Highlights","media.subtitle":"Selected plays that showcase our strategic execution and teamfighting.","media.placeholder":"Highlights / Slider area (sponsors, photos, etc.)",
+        "schedule.title":"Schedule & Results","schedule.subtitle":"T2's recent fixtures and results (mirrors recent LCK schedule).","schedule.upcoming":"UPCOMING","schedule.win":"WIN","schedule.lose":"LOSE",
         "member.title":"Membership","member.subtitle":"Join easily with an email. Select a plan and enter your email to request membership.","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
         "member.p1.b1":"Members-only newsletter","member.p1.b2":"Discord badge",
         "member.p2.b1":"Includes ROOKIE perks","member.p2.b2":"Early highlight access","member.p2.b3":"Monthly Q&A",
@@ -567,36 +583,28 @@
       zh:{
         "nav.home":"主页","nav.roster":"阵容","nav.achievements":"成就","nav.media":"媒体","nav.schedule":"赛程","nav.membership":"会员",
         "hero.title":"T2 崛起","hero.subtitle":"T2 是一家以线路优势与体系化运营为核心的职业 Wild Rift 战队，在国际赛场保持竞争力。",
-        "hero.btnHighlight":"观看集锦","hero.btnRoster":"查看阵容",
-        "hero.stat1.title":"Since 2024","hero.stat1.desc":"持续的国际赛成绩","hero.stat2.title":"Competitive","hero.stat2.desc":"职业阶段运营","hero.stat3.title":"Fandom","hero.stat3.desc":"#T2Rises",
+        "hero.btnHighlight":"观看精彩集锦","hero.btnRoster":"查看阵容",
+        "hero.stat1.title":"Since 2024","hero.stat1.desc":"持续的国际赛成绩","hero.stat2.title":"Competitive","hero.stat2.desc":"职业阶段运营","hero.stat3.title":"粉丝","hero.stat3.desc":"Tibungi",
         "hero.identity.title":"团队定位","hero.identity.desc":"通过强势线路获取早期主动权，并在关键团战中以稳健判断取得胜利，巩固比赛优势。",
         "hero.identity.p1":"线路优先与领先管理","hero.identity.p2":"团战执行的明确分工","hero.identity.p3":"以数据为基础的赛前准备与反馈",
         "roster.title":"阵容","roster.subtitle":"用主用英雄图片替代选手头像以传达战术侧重点。","roster.mains":"主用","roster.utility":"机动",
-        "ach.title":"成就","ach.subtitle":"国内与国际赛场的代表性赛事记录（按赛事列出）。",
-        "media.title":"集锦","media.subtitle":"展示战术执行与团战能力的精选片段。","media.placeholder":"轮播区域（赞助、照片等）",
-        "schedule.title":"赛程与战果","schedule.subtitle":"包含 LCK Legend Group 队伍的近期赛程与结果。","schedule.upcoming":"即将开始","schedule.win":"胜","schedule.lose":"负",
-        "member.title":"会员","member.subtitle":"输入邮箱即可快速申请会员。选择计划后输入邮箱发送申请邮件。","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
+        "ach.title":"成就","ach.subtitle":"国内与国际赛场的代表性赛事记录。","media.title":"集锦","media.subtitle":"展示战术执行与团战能力的精选片段。","media.placeholder":"精彩集锦",
+        "schedule.title":"赛程与战果","schedule.subtitle":"T2 的近期赛程与战果（参考 LCK）","schedule.upcoming":"即将开始","schedule.win":"胜","schedule.lose":"负",
+        "member.title":"会员","member.subtitle":"通过邮箱即可快速申请会员。选择计划后输入邮箱发送申请邮件。","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
         "member.p1.b1":"会员专属简报","member.p1.b2":"Discord 徽章",
-        "member.p2.b1":"包含 ROOKIE 权益","member.p2.b2":"抢先观看集锦","member.p2.b3":"每月 Q&A",
+        "member.p2.b1":"包含 ROOKIE 权益","member.p2.b2":"集锦抢先看","member.p2.b3":"每月 Q&A",
         "member.p3.b1":"包含 PRO 权益","member.p3.b2":"季度周边抽奖","member.p3.b3":"线下见面优先权",
-        "member.join":"加入","member.formTitle":"快速加入","member.formBtn":"加入会员","member.note":"将通过您的邮件客户端创建确认邮件请求。"
+        "member.join":"加入","member.formTitle":"快速加入","member.formBtn":"加入会员","member.note":"确认邮件将通过您的邮件客户端生成。"
       },
       ja:{
         "nav.home":"ホーム","nav.roster":"ロスター","nav.achievements":"実績","nav.media":"メディア","nav.schedule":"スケジュール","nav.membership":"メンバーシップ",
         "hero.title":"RISE OF T2","hero.subtitle":"T2 はライン戦に強みを持ち、体系的な運用で国際舞台でも競争力を保持するプロ組織です。",
         "hero.btnHighlight":"ハイライトを見る","hero.btnRoster":"ロスターを見る",
-        "hero.stat1.title":"Since 2024","hero.stat1.desc":"国際大会での安定した成績","hero.stat2.title":"Competitive","hero.stat2.desc":"プロフェッショナルな運用","hero.stat3.title":"Fandom","hero.stat3.desc":"#T2Rises",
+        "hero.stat1.title":"Since 2024","hero.stat1.desc":"国際大会での安定した成績","hero.stat2.title":"Competitive","hero.stat2.desc":"プロフェッショナルな運用","hero.stat3.title":"ファンダム","hero.stat3.desc":"ティブンギ",
         "hero.identity.title":"アイデンティティ","hero.identity.desc":"ライン戦で序盤の主導権を確保し、重要な集団戦での判断によって試合を締めくくります。",
         "hero.identity.p1":"ライン中心の優先権管理","hero.identity.p2":"集団戦での明確な役割分担","hero.identity.p3":"データに基づく準備とフィードバック",
         "roster.title":"ロスター","roster.subtitle":"選手の顔の代わりに、戦術的特徴を示すメインチャンプを表示します。","roster.mains":"メイン","roster.utility":"ユーティリティ",
-        "ach.title":"実績","ach.subtitle":"国内・国際の主要大会での代表的な記録（大会名で記載）。",
-        "media.title":"ハイライト","media.subtitle":"戦術的実行とチームファイトを示すプレイをピックアップ。","media.placeholder":"スライダー領域（スポンサー/写真など）",
-        "schedule.title":"スケジュール＆結果","schedule.subtitle":"LCK Legend Group のチームを基にした直近の試合と結果。","schedule.upcoming":"予定","schedule.win":"勝","schedule.lose":"敗",
-        "member.title":"メンバーシップ","member.subtitle":"メールで簡単登録。プラン選択後にメールを入力して申請します。","member.plan1":"ROOKIE","member.plan2":"PRO","member.plan3":"LEGEND",
-        "member.p1.b1":"会員限定ニュースレター","member.p1.b2":"Discord バッジ",
-        "member.p2.b1":"ROOKIE 特典含む","member.p2.b2":"ハイライト先行公開","member.p2.b3":"月1回 Q&A",
-        "member.p3.b1":"PRO 特典含む","member.p3.b2":"四半期グッズ抽選","member.p3.b3":"オフライン優先参加",
-        "member.join":"加入","member.formTitle":"クイック加入","member.formBtn":"加入する","member.note":"メールクライアントを使用して確認メールを作成します。"
+        "ach.title":"実績","ach.subtitle":"国内・国際の主要大会での代表的な記録。","media.title":"ハイライト","media.subtitle":"戦術的実行とチームファイトを示すプレイをピックアップ。","media.placeholder":"ハイライト"
       }
     };
 
@@ -607,13 +615,15 @@
         const key=el.getAttribute('data-i18n');
         if(t[key]) el.textContent=t[key];
       });
+      // fandom 별칭(일부 언어에서 별도 표기)
+      const fandom = {ko:'티붕이', en:'Tibungi', zh:'Tibungi', ja:'ティブンギ'}[lang] || 'Tibungi';
+      document.getElementById('fandom').textContent = fandom;
       localStorage.setItem('t2-lang', lang);
       document.getElementById('lang-switch').value = lang;
     }
 
     const savedLang = localStorage.getItem('t2-lang') || 'ko';
     applyLang(savedLang);
-
     document.getElementById('lang-switch').addEventListener('change', (e)=> applyLang(e.target.value));
   </script>
 </body>
